@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>hsi.ac</path>
+	
+  <animation>
+    <object-name>bezeloutside</object-name>
+    <object-name>bezelinside</object-name>
+    <object-name>Face-t</object-name>
+    <object-name>Face-m</object-name>
+    <object-name>DME</object-name>
+    <object-name>ind</object-name>
+    <object-name>Needle2</object-name>
+    <object-name>Needle1-m</object-name>
+    <object-name>Needle1-t</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face-m</object-name>
+    <object-name>Needle1-m</object-name>
+    <object-name>Face-t</object-name>
+    <object-name>Needle1-t</object-name>
+    <object-name>DME</object-name>
+    <object-name>ind</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.6 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission> 
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Face-m</object-name>
+    <object-name>Needle1-m</object-name>
+    <property>orientation/heading-magnetic-deg</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind> 180 </ind><dep> 180 </dep></entry>
+      <entry><ind> 270 </ind><dep> 270 </dep></entry>
+      <entry><ind> 360 </ind><dep> 360 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Face-m</object-name>
+    <object-name>Needle1-m</object-name>-->
+    <condition>
+      <property>instrumentation/heading-indicator/heading-source</property>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle1-m</object-name>
+    <property>instrumentation/heading-indicator/heading-bug-deg/</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind> 180 </ind><dep> 180 </dep></entry>
+      <entry><ind> 270 </ind><dep> 270 </dep></entry>
+      <entry><ind> 360 </ind><dep> 360 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Face-t</object-name>
+    <object-name>Needle1-t</object-name>
+    <property>orientation/heading-deg</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind> 180 </ind><dep> 180 </dep></entry>
+      <entry><ind> 270 </ind><dep> 270 </dep></entry>
+      <entry><ind> 360 </ind><dep> 360 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Face-t</object-name>
+    <object-name>Needle1-t</object-name>
+    <condition>
+      <not>
+        <property>instrumentation/heading-indicator/heading-source</property>
+      </not>
+    </condition>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Needle1-t</object-name>
+    <property>instrumentation/heading-indicator/heading-bug-deg/</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  90 </ind><dep>  90 </dep></entry>
+      <entry><ind> 180 </ind><dep> 180 </dep></entry>
+      <entry><ind> 270 </ind><dep> 270 </dep></entry>
+      <entry><ind> 360 </ind><dep> 360 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Panel Lighting -->
+  <animation>
+    <type>material</type>
+    <emission>
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+      <red>   0.75 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+    </emission>
+  </animation>
+
+  <!-- *** LoD *** -->
+  <animation>
+    <type>range</type>
+    <min-m>  0 </min-m>
+    <max-m> 10 </max-m>
+  </animation>
+
+</PropertyList>
+

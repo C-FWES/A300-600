@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>aiSTB.ac</path>
+
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>BezelINT</object-name>
+    <object-name>face</object-name>
+    <object-name>AIback</object-name>
+    <object-name>ROLLneedle</object-name>
+    <object-name>GPS-slaved</object-name>
+    <object-name>GPS-alt</object-name>
+    <object-name>GPS-navmode</object-name>
+    <object-name>FDbars</object-name>
+    <object-name>Plane</object-name>
+    <object-name>GS-scale</object-name>
+    <object-name>GS-pointer</object-name>
+    <object-name>LOC-scale</object-name>
+    <object-name>LOC-pointer</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>AIback</object-name>
+    <object-name>ROLLneedle</object-name>
+    <object-name>GPS-slaved</object-name>
+    <object-name>GPS-alt</object-name>
+    <object-name>GPS-navmode</object-name>
+    <object-name>FDbars</object-name>
+    <object-name>Plane</object-name>
+    <object-name>GS-scale</object-name>
+    <object-name>GS-pointer</object-name>
+    <object-name>LOC-scale</object-name>
+    <object-name>LOC-pointer</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.6 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission> 
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>FDbars</object-name>
+    <condition>
+      <or>
+        <not-equals>
+          <property>/instrumentation/flightdirector/lnav</property>
+          <value> 0 </value>
+        </not-equals>
+        <not-equals>
+          <property>/instrumentation/flightdirector/vnav</property>
+          <value> 0 </value>
+        </not-equals>
+      </or>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GS-scale</object-name>
+    <object-name>GS-pointer</object-name>
+    <condition>
+      <and>
+        <less-than>
+          <property>/instrumentation/nav/gs-distance</property>
+          <value> 30000 </value>
+        </less-than>
+        <property>/instrumentation/nav/has-gs</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>FDbars</object-name>
+    <property>autopilot/settings/target-pitch-deg</property>
+    <factor>0.00087</factor>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.001 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>FDbars</object-name>
+    <property>/autopilot/internal/target-roll-deg</property>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.007 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>FDbars</object-name>
+    <property>orientation/roll-deg</property>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.007 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ROLLneedle</object-name>
+    <property>orientation/roll-deg</property>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.007 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>FDbars</object-name>
+    <property>/orientation/pitch-deg</property>
+    <factor> 0.00087 </factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.001 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>GS-pointer</object-name>
+    <property>/instrumentation/nav/gs-needle-deflection</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.0108 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.0108 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>LOC-pointer</object-name>
+    <property>/instrumentation/flightdirector/crs-deflection</property>
+    <factor> 0.00116 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+  </animation>
+
+  <animation>
+    <type>texmultiple</type>
+    <object-name>AIback</object-name>
+    <transform>
+      <property>/orientation/pitch-deg</property>
+      <subtype>textranslate</subtype>
+      <factor>0.004296</factor>
+      <axis>
+        <x> 0 </x>
+        <y> 1 </y>
+        <z> 0 </z>
+      </axis>
+    </transform>
+    <transform>
+      <property>/orientation/roll-deg</property>
+      <subtype>texrotate</subtype>
+      <center>
+        <x> 0.25 </x>
+        <y> 0.50 </y>
+      </center>
+      <axis>
+        <x>  0 </x>
+        <y>  0 </y>
+        <z> -1 </z>
+      </axis>
+    </transform>
+  </animation>
+
+</PropertyList>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>yoke.ac</path>
+
+  <model>
+    <name>YokeGuidon</name>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Yokes/yokeL.xml</path>
+    <offsets>
+      <x-m>  0.060 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.606 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>AllYoke</name>
+    <object-name>YokeCol</object-name>
+    <object-name>Yoke</object-name>
+    <object-name>YokeGuidon</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>AllYoke</object-name>
+    <property>controls/flight/elevator</property>
+    <factor> -5 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>Volant</name>
+    <object-name>Yoke</object-name>
+    <object-name>YokeGuidon</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Volant</object-name>
+    <property>controls/flight/aileron</property>
+    <factor> -45 </factor>
+    <center>
+      <x-m> 0.060 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.621 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
+

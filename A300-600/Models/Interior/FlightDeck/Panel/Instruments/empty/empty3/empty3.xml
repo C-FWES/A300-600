@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>empty3.ac</path>
+ 
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>Screen</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Screen</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>
+
+

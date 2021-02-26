@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!-- 
+ Airbus330 2014
+ Distributed under the terms of the GNU General Public Livense v2
+ Flightdeck: Pierre Duval
+ Models, Texture: Toryx
+ -->
+
+<PropertyList include="A300-600-common.xml">
+
+	<sim>
+		<description>Airbus A300-603</description>
+		<aircraft-version>0.12</aircraft-version>
+		<status>alpha</status>
+		<rating>
+		 <FDM type="int">1</FDM>
+		 <systems type="int">0</systems>
+		 <cockpit type="int">3</cockpit>
+		 <model type="int">4</model>
+		</rating>
+		<author>Models: Toryx, Airbus330, Pierre Duval; Flightdeck: Pierre Duval</author>
+		<flight-model>jsb</flight-model>
+		<aero>A300-603</aero>
+		<variant>603</variant>
+		<engine>GE-CF6-80C2A3</engine>
+		
+		<startup>
+			<splash-texture>Splashs/splash-603.png</splash-texture>
+			<splash-title>Airbus A300-603 v0.16</splash-title>
+		</startup>
+		
+		<previews>
+            <preview>
+                <type>cockpit</type>
+                <path>Splashs/cockpit.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashs/exterior.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+		</previews>
+		
+		<flaps>
+			<setting>0.00</setting>
+			<setting>0.29</setting>
+			<setting>0.596</setting>
+			<setting>0.745</setting>
+			<setting>1</setting>
+	
+		</flaps>
+	
+		<electrical>
+			<path></path>
+		</electrical>
+		
+		<model>
+			<path>Aircraft/A300-600/Models/A300-603.xml</path>
+			<livery>
+				<file type="string"/>
+			</livery>
+			<pushback>
+				<kp type="double">2000</kp>
+				<ki type="double">0</ki>
+				<kd type="double">0</kd>
+				<position-norm type="double">0</position-norm>
+			</pushback>
+ 		</model>
+
+		<sound>
+            <path>Aircraft/A300-600/Sounds/A300-sound.xml</path>
+            <switch type = "bool">0</switch>
+			<Evolume>1</Evolume>
+        </sound>
+		
+		<view>
+		   <internal archive="y">true</internal>
+			<config>
+			 <x-offset-m archive="y">-0.5688</x-offset-m>
+			 <y-offset-m archive="y">0.94</y-offset-m>
+			 <z-offset-m archive="y">-17.3</z-offset-m>
+			 <pitch-offset-deg archive="y">-5.0</pitch-offset-deg>
+			  <default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
+			</config>
+		</view>
+			<chase-distance-m type="double">-80</chase-distance-m>
+	     
+                 <menubar>
+			<default>
+
+		   <menu n="100">
+			<label>A300-603</label>
+			<enabled type="bool">true</enabled>
+			<item>
+			 <label>Select Livery</label>
+			 <binding>
+			  <command>nasal</command>
+			  <script>aircraft.livery.dialog.open()</script>
+			 </binding>
+			</item>
+		  </menu>
+		</default>
+		</menubar>
+<payload>
+	<weight>
+		<name type="string">Passengers and crew</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+		<min-lb type="double">0</min-lb>
+		<max-lb type="double">39000</max-lb>
+	</weight>
+
+	<weight>
+		<name type="string">Forward Cargo</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+		<min-lb type="double">0</min-lb>
+		<max-lb type="double">20000</max-lb>
+	</weight>
+
+	<weight>
+		<name type="string">Aft Cargo</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+		<min-lb type="double">0</min-lb>
+		<max-lb type="double">20000</max-lb>
+	</weight>
+
+	<weight>
+		<name type="string">Rear Bulk Cargo</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+		<min-lb type="double">0</min-lb>
+		<max-lb type="double">4500</max-lb>
+	</weight>
+</payload>
+	</sim>
+	
+	<engines>
+            <engine-start-switch type="int">1</engine-start-switch>
+            <engine n="0">
+		<cutoff type="bool">true</cutoff>
+		<cutoff-switch type="bool">true</cutoff-switch>
+		<starter type="bool">false</starter>
+		<starter-switch type="bool">false</starter-switch>
+		</engine>
+		<engine n="1">
+		<cutoff type="bool">true</cutoff>
+		<cutoff-switch type="bool">true</cutoff-switch>
+		<starter type="bool">false</starter>
+		<starter-switch type="bool">false</starter-switch>
+		</engine>
+	</engines>	
+	
+		<nasal>
+		<A300-600> 
+		  <file>Nasal/liveries603.nas</file>
+             <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+		</A300-600>
+	</nasal> 
+
+    <gear n="0">
+        <gear n="0">
+            <tyre-smoke type="bool">0</tyre-smoke>
+            <sprayspeed-ms type="double">0</sprayspeed-ms>
+            <spray-density type="double">0</spray-density>
+            <caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+        </gear>
+        <gear n="1">
+            <tyre-smoke type="bool">0</tyre-smoke>
+            <sprayspeed-ms type="double">0</sprayspeed-ms>
+            <spray-density type="double">0</spray-density>
+        </gear>
+        <gear n="2">
+            <tyre-smoke type="bool">0</tyre-smoke>
+            <sprayspeed-ms type="double">0</sprayspeed-ms>
+            <spray-density type="double">0</spray-density>
+        </gear>
+    </gear>
+
+
+
+</PropertyList>

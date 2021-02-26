@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>pedestal.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panelC</object-name>
+    <object-name>panelC.004</object-name>
+    <object-name>panelC.005</object-name>
+    <object-name>panelC.006</object-name>
+    <object-name>panelC.007</object-name>
+    <object-name>panelC.008</object-name>
+    <object-name>panelC.009</object-name>
+    <object-name>panelC.010</object-name>
+    <object-name>panelC.011</object-name>
+    <object-name>panelC.012</object-name>
+    <object-name>panelC.013</object-name>
+    <object-name>panelC.015</object-name>
+    <object-name>panelC.016</object-name>
+    <object-name>panelC.017</object-name>
+    <object-name>panelC.018</object-name>
+    <object-name>panelC.019</object-name>
+    <object-name>panelC.021</object-name>
+    <object-name>panelC.022</object-name>
+    <object-name>panelC.023</object-name>
+    <object-name>panelC.024</object-name>
+    <object-name>panelC.027</object-name>
+    <object-name>panelC.029</object-name>
+    <object-name>panelC.030</object-name>
+    <object-name>panelC.031</object-name>
+    <object-name>panelC.033</object-name>
+    <object-name>panelC.034</object-name>
+    <object-name>panelC.035</object-name>
+    <object-name>panelC.036</object-name>
+    <object-name>panelC.038</object-name>
+    <object-name>Bezel.019</object-name>
+    <object-name>Bezel.020</object-name>
+    <object-name>Bezel.021</object-name>
+    <object-name>Bezel.022</object-name>
+    <object-name>Cylinder.030</object-name>
+    <object-name>Cylinder.031</object-name>
+    <object-name>Cylinder.032</object-name>
+    <object-name>Cylinder.034</object-name>
+    <object-name>Cylinder.035</object-name>
+    <object-name>Cylinder.036</object-name>
+    <object-name>Cylinder.037</object-name>
+    <object-name>Cylinder.038</object-name>
+    <object-name>Plane</object-name>
+    <object-name>Plane.002</object-name>
+    <object-name>Circle</object-name>
+    <object-name>SbrakeLever</object-name>
+    <object-name>PbrakeLever</object-name>
+    <object-name>Eng1-2</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+ 
+  <!-- FMC -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Pedestal/fmc/fmc.xml</path>
+    <offsets>
+      <x-m> -0.261 </x-m>
+      <y-m> -0.217 </y-m>
+      <z-m>  0.155 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Pedestal/fmc/fmc.xml</path>
+    <offsets>
+      <x-m> -0.261 </x-m>
+      <y-m>  0.217 </y-m>
+      <z-m>  0.155 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- COMPUTER -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Pedestal/computer/computer.xml</path>
+    <offsets>
+      <x-m>  0.262 </x-m>
+      <y-m> -0.165 </y-m>
+      <z-m>  0.129 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Pedestal/computer/computer.xml</path>
+    <offsets>
+      <x-m> 0.262 </x-m>
+      <y-m> 0.165 </y-m>
+      <z-m> 0.129 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ENG LEVERS -->
+  <animation>
+    <type>rotate</type>
+    <object-name>Eng1-2</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -39.61 </factor>
+    <center>
+      <x-m> 0.017 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.060 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
+

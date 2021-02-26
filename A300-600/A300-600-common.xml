@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+ <sim>
+	<systems>	
+            <path>Aircraft/A300-600/Systems/A300-systems.xml</path>
+	
+		<autopilot>
+				<name>Autopilot</name>
+				<path>Aircraft/A300-600/Systems/A300-autopilot.xml</path>
+			</autopilot>
+			<autopilot>
+				<name>Autopilot helpers</name>
+				<path>Aircraft/Generic/generic-autopilot-helper.xml</path>
+			</autopilot>
+			<autopilot>
+				<name>Autobrake</name>
+				<path>Aircraft/A300-600/Systems/A300-autobrake.xml</path>
+			</autopilot>
+			
+
+ 	</systems>
+      <menubar>
+	<default>
+		   <menu n="100">
+			<item n="1">
+			 <label>Autostart</label>
+			 <name>Autostart</name>
+			 <binding>
+			  <command>nasal</command>
+			  <script>var start1 = func { setprop("/controls/engines/engine/cutoff", 0) };
+var start2 = func { setprop("/controls/engines/engine[1]/cutoff", 0) };
+setprop ("controls/gear/brake-parking", 1);
+setprop ("controls/fuel/tank[2]/boost-pump", 1);
+setprop ("controls/fuel/tank[4]/boost-pump", 1);
+setprop ("controls/engines/engine/starter", 1);
+setprop ("controls/engines/engine[1]/starter", 1);
+settimer(start1, 3);
+settimer(start2, 16);</script>
+			 </binding>
+			<binding>
+			<command>property-assign</command>
+			<property>/autopilot/internal/engaged</property>
+			<value>0</value>
+			</binding>
+			</item>
+		        <item>
+		         <label>Pushback</label>
+		         <name>pushback</name>
+		         <binding>
+		          <command>dialog-show</command>
+		          <dialog-name>pushback</dialog-name>
+		        </binding>
+		       </item>
+		  </menu>
+		</default>
+		</menubar>
+</sim>
+	<engines>
+            <engine-start-switch type="int">1</engine-start-switch>
+            <engine n="0">
+		<cutoff type="bool">true</cutoff>
+		<cutoff-switch type="bool">true</cutoff-switch>
+		<starter type="bool">false</starter>
+		<starter-switch type="bool">false</starter-switch>
+		</engine>
+		<engine n="1">
+		<cutoff type="bool">true</cutoff>
+		<cutoff-switch type="bool">true</cutoff-switch>
+		<starter type="bool">false</starter>
+		<starter-switch type="bool">false</starter-switch>
+		</engine>
+	</engines>	
+	
+
+    <gear n="0">
+        <gear n="0">
+            <tyre-smoke type="bool">0</tyre-smoke>
+            <sprayspeed-ms type="double">0</sprayspeed-ms>
+            <spray-density type="double">0</spray-density>
+            <caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+        </gear>
+        <gear n="1">
+            <tyre-smoke type="bool">0</tyre-smoke>
+            <sprayspeed-ms type="double">0</sprayspeed-ms>
+            <spray-density type="double">0</spray-density>
+        </gear>
+        <gear n="2">
+            <tyre-smoke type="bool">0</tyre-smoke>
+            <sprayspeed-ms type="double">0</sprayspeed-ms>
+            <spray-density type="double">0</spray-density>
+        </gear>
+    </gear>
+	
+	<instrumentation>
+	
+		<!-- See http://wiki.flightgear.org/index.php/GPWS -->
+		<mk-viii n="0">
+			<serviceable type="bool">true</serviceable>
+			<configuration-module>
+				<category-1 type="int">255</category-1>
+				<category-3 type="int">2</category-3>
+				<category-4 type="int">1000</category-4>
+				<category-5 type="int">0</category-5>
+				<category-6 type="int">1</category-6>
+				<category-7 type="int">124</category-7>
+				<category-8 type="int">3</category-8>
+				<category-9 type="int">3</category-9> 
+				<category-10 type="int">6</category-10>
+				<category-13 type="int">7</category-13>
+				<category-14 type="int">0</category-14>
+			</configuration-module>
+			<inputs>
+				<arinc429>
+					<decision-height-ncd type="bool">0</decision-height-ncd>
+					<decision-height type="double">250</decision-height>
+				</arinc429>
+			</inputs>
+			<speaker>
+				<max-dist type="double">200</max-dist>
+				<reference-dist type="double">2</reference-dist>
+				<volume type="double">2</volume>
+			</speaker>
+			<voice>
+				<file-prefix>Aircraft/A300-600/Sounds/GPWS/</file-prefix>
+			</voice>
+		</mk-viii>
+		
+	</instrumentation>
+
+</PropertyList>

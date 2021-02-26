@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>vsi.ac</path>
+
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>BezelInt</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/eng-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <interpolation>
+      <entry><ind> -2000 </ind><dep> -173.0 </dep></entry>
+      <entry><ind> -1500 </ind><dep> -126.0 </dep></entry>
+      <entry><ind> -1000 </ind><dep>  -84.0 </dep></entry>
+      <entry><ind>  -500 </ind><dep>  -41.5 </dep></entry>
+      <entry><ind>     0 </ind><dep>    0.0 </dep></entry>
+      <entry><ind>   500 </ind><dep>   41.5 </dep></entry>
+      <entry><ind>  1000 </ind><dep>   84.0 </dep></entry>
+      <entry><ind>  1500 </ind><dep>  126.0 </dep></entry>
+      <entry><ind>  2000 </ind><dep>  173.0 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

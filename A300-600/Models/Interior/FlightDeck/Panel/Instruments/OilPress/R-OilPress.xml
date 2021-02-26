@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    <path>OilPress.ac</path>
+
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
+    <object-name>Needle.001</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/eng-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>needle</object-name>
+    <object-name>needle.001</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/engines/engine[1]/oil-pressure-psi</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 160 </ind><dep> 180 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.005 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+	
+  <animation>
+    <type>rotate</type>
+    <object-name>needle.001</object-name>
+    <property>/engines/engine[1]/oil-pressure-psi</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 160 </ind><dep> -180 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.004 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

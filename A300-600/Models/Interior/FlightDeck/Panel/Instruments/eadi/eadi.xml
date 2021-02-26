@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>eadi.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>ArtHorizon</object-name>
+    <object-name>Roll.needle</object-name>
+    <object-name>FDbars</object-name>
+    <object-name>AirplaneSymbol</object-name>
+    <object-name>GS.needle</object-name>
+    <object-name>LOC.needle</object-name>
+    <object-name>GS.scale</object-name>
+    <object-name>LOC.scale</object-name>
+    <object-name>ASIribbon</object-name>
+    <object-name>Alttape1</object-name>
+    <object-name>Alttape2</object-name>
+    <object-name>ALT.1</object-name>
+    <object-name>ALT.10</object-name>
+    <object-name>ALT.100</object-name>
+    <object-name>ALT.1000</object-name>
+    <object-name>ALT.10000</object-name>
+    <object-name>ASI.1</object-name>
+    <object-name>ASI.10</object-name>
+    <object-name>ASI.100</object-name>
+    <object-name>INH.1</object-name>
+    <object-name>INH.2</object-name>
+    <object-name>INH.3</object-name>
+    <object-name>INH.4</object-name>
+    <object-name>INH.dec</object-name>
+    <object-name>DH.1</object-name>
+    <object-name>DH.10</object-name>
+    <object-name>DH.100</object-name>
+    <object-name>DH</object-name>
+    <object-name>DHamber.1</object-name>
+    <object-name>DHamber.10</object-name>
+    <object-name>DHamber.100</object-name>
+    <object-name>DHamber</object-name>
+    <object-name>vs.ind</object-name>
+    <object-name>alt.ind</object-name>
+    <object-name>nav.ind</object-name>
+    <object-name>hdg.ind</object-name>
+    <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.6 </red>
+      <green> 0.3 </green>
+      <blue>  0.3 </blue>
+    </emission>
+  </animation>
+
+  <!--
+  <animation>
+    <type>material</type>
+    <object-name>Bezel</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/panel-norm</factor-prop>
+      <red>   0.100 </red>
+      <green> 0.050 </green>
+      <blue>  0.025 </blue>
+    </emission>
+  </animation>
+  -->
+
+  <animation>
+    <type>texmultiple</type>
+    <object-name>ArtHorizon</object-name>
+    <transform>
+      <property>orientation/pitch-deg</property>
+      <subtype>textranslate</subtype>
+      <factor>0.0046</factor>
+      <axis>
+        <x> 0 </x>
+        <y> 1 </y>
+        <z> 0 </z>
+      </axis>
+    </transform>
+    <transform>
+      <property>orientation/roll-deg</property>
+      <subtype>texrotate</subtype>
+      <center>
+        <x> 0.25 </x>
+        <y> 0.50 </y>
+      </center>
+      <axis>
+        <x>  0 </x>
+        <y>  0 </y>
+        <z> -1 </z>
+      </axis>
+    </transform>
+  </animation>
+
+  <!--airspeed-->
+  <animation>
+    <type>select</type>
+    <object-name>ASI.10</object-name>
+    <condition>
+      <greater-than>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+        <value>9.999</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ASI.100</object-name>
+    <condition>
+      <greater-than>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+        <value>99.999</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ASI.100</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ASI.10</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ASI.1</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ASIribbon</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep> 0.0000 </dep></entry>
+      <entry><ind> 240 </ind><dep> 0.5493 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Alttape1</object-name>
+    <condition>
+      <less-than>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
+        <value>9500</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Alttape2</object-name>
+    <condition>
+      <greater-than>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
+        <value>9499.999</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Alttape1</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep> 0.0000 </dep></entry>
+      <entry><ind> 9500 </ind><dep> 0.9068 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Alttape2</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <interpolation>
+      <entry><ind>  9500 </ind><dep> 0.0000 </dep></entry>
+      <entry><ind> 19000 </ind><dep> 0.9068 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>GS.needle</object-name>
+    <object-name>GS.scale</object-name>
+    <condition>
+      <and>
+        <property>/instrumentation/nav[0]/nav-loc</property>
+        <property>/instrumentation/nav[0]/in-range</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LOC.needle</object-name>
+    <object-name>LOC.scale</object-name>
+    <condition>
+      <and>
+        <property>/instrumentation/nav[0]/nav-loc</property>
+        <property>/instrumentation/nav[0]/in-range</property>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>LOC.needle</object-name>
+    <property>/instrumentation/nav/heading-needle-deflection</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.0125 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0.0000 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.0125 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>GS.needle</object-name>
+    <property>/instrumentation/nav/gs-needle-deflection</property>
+    <interpolation>
+      <entry><ind> -10 </ind><dep> -0.0125 </dep></entry>
+      <entry><ind>   0 </ind><dep>  0.0000 </dep></entry>
+      <entry><ind>  10 </ind><dep>  0.0125 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ALT.1</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ALT.10</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ALT.100</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ALT.1000</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.0001</factor>
+    <step>1000</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>ALT.10000</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.00001</factor>
+    <step>10000</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>INH.1</object-name>
+    <property>instrumentation/altimeter/setting-inhg</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>INH.2</object-name>
+    <property>instrumentation/altimeter/setting-inhg</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>INH.3</object-name>
+    <property>instrumentation/altimeter/setting-inhg</property>
+    <factor>1.0</factor>
+    <step>0.1</step>
+    <bias>0.005</bias>  
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>INH.4</object-name>
+    <property>instrumentation/altimeter/setting-inhg</property>
+    <factor>10.0</factor>
+    <step>0.01</step>
+    <bias>0.005</bias>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- DH -->
+  <animation>
+    <type>select</type>
+    <object-name>DH</object-name>
+    <object-name>DH.1</object-name>
+    <object-name>DH.10</object-name>
+    <object-name>DH.100</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>instrumentation/altimeter/DH</property>
+          <value>0</value>
+        </greater-than>
+        <greater-than>
+          <property>position/altitude-agl-ft</property>
+          <property>instrumentation/altimeter/DH</property>
+        </greater-than>
+      </and>
+      <!--<equals><value>1</value><value>0</value></equals>-->
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>DHamber</object-name>
+    <object-name>DHamber.1</object-name>
+    <object-name>DHamber.10</object-name>
+    <object-name>DHamber.100</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>instrumentation/altimeter/DH</property>
+          <value>0</value>
+        </greater-than>
+        <less-than-equals>
+          <property>position/altitude-agl-ft</property>
+          <property>instrumentation/altimeter/DH</property>
+        </less-than-equals>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>DH.1</object-name>
+    <property>instrumentation/altimeter/DH</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>DH.10</object-name>
+    <property>instrumentation/altimeter/DH</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>DH.100</object-name>
+    <property>instrumentation/altimeter/DH</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>DHamber.1</object-name>
+    <property>position/altitude-agl-ft</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>DHamber.10</object-name>
+    <property>position/altitude-agl-ft</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>DHamber.100</object-name>
+    <property>position/altitude-agl-ft</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- AP annunciators-->
+  <animation>
+    <type>select</type>
+    <object-name>hdg.ind</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/locks/heading</property>
+        <value>dg-heading-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>nav.ind</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/locks/heading</property>
+        <value>nav1-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>vs.ind</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/locks/altitude</property>
+        <value>vertical-speed-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>alt.ind</object-name>
+    <condition>
+      <equals>
+        <property>autopilot/locks/altitude</property>
+        <value>altitude-hold</value>
+      </equals>
+    </condition>
+  </animation>
+
+</PropertyList>
+

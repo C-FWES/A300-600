@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- FLIGHTDECK -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/flightdeck.xml</path>
+    <offsets>
+      <x-m> -17.274 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -0.037 </z-m>
+    </offsets>
+  </model>
+  
+</PropertyList>
+

@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+
+ <!-- 
+ Copyright Airbus330 2014
+ Distributed under the terms of the GNU General Public Livense v2
+ -->
+
+<PropertyList>
+<!-- ................................................... -->
+<!-- Models -->
+<!-- ................................................... -->
+ 
+ <offsets>
+  <x-m> 0.0</x-m>
+  <y-m> 0.0</y-m>
+  <z-m> -0.08</z-m>
+ </offsets>
+ 
+<model>
+ <name>Fuselage</name>
+ <path>Aircraft/A300-600/Models/Fuselage.xml</path>
+</model>
+
+<model>
+ <nopreview/>
+ <name>Interior</name>
+ <path>Aircraft/A300-600/Models/Interior/interior.xml</path>
+</model>
+
+<model>
+ <name>Wings</name>
+ <path>Aircraft/A300-600/Models/Wings.xml</path>
+</model> 
+
+<model>
+ <name>Tail</name>
+ <path>Aircraft/A300-600/Models/Tail.xml</path>
+</model>
+ 
+<model>
+ <name>Engines</name>
+ <path>Aircraft/A300-600/Models/GE-CF6.xml</path>
+</model>
+
+<model>
+ <name>Gears</name>
+ <path>Aircraft/A300-600/Models/Gears.xml</path>
+
+</model>
+<model>
+ <path>Aircraft/A300-600/Models/Effects/tyre-smoke-nose.xml</path>
+ <name>tyre-smoke-n</name>
+ <offsets>
+  <x-m>-19.00</x-m>
+  <y-m>0</y-m>
+  <z-m>-5.50</z-m>
+ </offsets>
+</model>
+
+
+<model>
+ <path>Aircraft/A300-600/Models/Effects/tyre-smoke-left.xml</path>
+ <name>tyre-smoke-l</name>
+ <offsets>
+  <x-m>7.80</x-m>
+  <y-m>-5.50</y-m>
+  <z-m>-5.70</z-m>
+ </offsets>
+</model>
+
+<model>
+ <path>Aircraft/A300-600/Models/Effects/tyre-smoke-right.xml</path>
+ <name>tyre-smoke-r</name>
+ <offsets>
+  <x-m>7.80</x-m>
+  <y-m>5.50</y-m>
+  <z-m>-5.70</z-m>
+ </offsets>
+</model>
+
+ <model>
+  <name>Pushback</name>
+  <path>Models\Airport\Pushback\Goldhofert.xml</path>
+  <offsets>
+   <x-m>-16.0</x-m>
+   <y-m>0</y-m>
+   <z-m>-5.05</z-m>
+  </offsets>
+ </model>
+
+
+<!--
+<model>
+ <name>Lights-Rembrandt</name>
+ <path>Lights-Rembrandt.xml</path>
+ <offsets>
+  <x-m> 0.0</x-m>
+  <y-m> 0.0</y-m>
+  <z-m> -0.35</z-m>
+ </offsets>
+</model>
+	
+<animation>
+	<type>select</type>
+	 <object-name>Lights-Rembrandt</object-name>
+	<condition>
+		<property>/sim/rendering/rembrandt/enabled</property>
+	</condition>
+</animation>
+-->
+<!-- ................................................... -->
+<!-- Livery select -->
+<!-- ................................................... -->
+<nasal>
+ <load>
+  var livery_update = aircraft.livery_update.new("Aircraft/A300-600/Models/Liveries/600F");
+ </load>
+ 
+ <unload>
+  livery_update.stop();
+ </unload>
+</nasal>
+
+</PropertyList>

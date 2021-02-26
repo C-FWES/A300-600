@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!-- 
+ Airbus330 2014
+ Distributed under the terms of the GNU General Public Livense v2
+ Flightdeck: Pierre Duval
+ Models, Texture: Toryx
+ -->
+
+<PropertyList include="A300-600-common.xml">
+
+	<sim>
+		<description>Airbus A300-600F</description>
+		<aircraft-version>0.12</aircraft-version>
+		<status>alpha</status>
+		<rating>
+		 <FDM type="int">1</FDM>
+		 <systems type="int">0</systems>
+		 <cockpit type="int">3</cockpit>
+		 <model type="int">4</model>
+		</rating>
+		<author>Models: Toryx, Airbus330, Pierre Duval; Flightdeck: Pierre Duval</author>
+		<flight-model>jsb</flight-model>
+		<aero>A300-600F</aero>
+		<variant>600F</variant>
+		<variant-of>A300-603</variant-of>
+		<engine>GE CF6</engine>
+		
+		<startup>
+			<splash-texture>Splashs/splash-600F.png</splash-texture>
+			<splash-title>Airbus A300-600F v0.16</splash-title>
+		</startup>
+		
+		<previews>
+            <preview>
+                <type>cockpit</type>
+                <path>Splashs/cockpit.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Splashs/exterior.png</path>
+                <splash type="bool">true</splash>
+            </preview>
+		</previews>
+		
+		<flaps>
+			<setting>0.00</setting>
+			<setting>0.29</setting>
+			<setting>0.596</setting>
+			<setting>0.745</setting>
+			<setting>1</setting>
+	
+		</flaps>
+	
+		<electrical>
+			<path></path>
+		</electrical>
+
+		<model>
+			<path>Aircraft/A300-600/Models/A300-600F.xml</path>
+			<livery>
+				<file type="string"/>
+			</livery>
+			<pushback>
+				<kp type="double">2000</kp>
+				<ki type="double">0</ki>
+				<kd type="double">0</kd>
+				<position-norm type="double">0</position-norm>
+			</pushback>
+ 		</model>
+
+		<sound>
+            <path>Aircraft/A300-600/Sounds/A300-sound.xml</path>
+            <switch type = "bool">0</switch>
+			<Evolume>1</Evolume>
+        </sound>
+		
+		<view>
+		   <internal archive="y">true</internal>
+			<config>
+			 <x-offset-m archive="y">-0.5688</x-offset-m>
+			 <y-offset-m archive="y">0.75</y-offset-m>
+			 <z-offset-m archive="y">-17.3</z-offset-m>
+			 <pitch-offset-deg archive="y">-5.0</pitch-offset-deg>
+			  <default-field-of-view-deg type="double">80.0</default-field-of-view-deg>
+			</config>
+		</view>
+			<chase-distance-m type="double">-80</chase-distance-m>
+	     
+                 <menubar>
+			<default>
+
+		   <menu n="100">
+			<label>A300-600F</label>
+			<enabled type="bool">true</enabled>
+			<item>
+			 <label>Select Livery</label>
+			 <binding>
+			  <command>nasal</command>
+			  <script>aircraft.livery.dialog.open()</script>
+			 </binding>
+			</item>
+		  </menu>
+		</default>
+		</menubar>
+</sim>
+<payload>
+	<weight>
+		<name type="string">Passengers and crew</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+		<min-lb type="double">0</min-lb>
+		<max-lb type="double">250</max-lb>
+	</weight>
+
+	<weight>
+		<name type="string"> Cargo</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+		<min-lb type="double">0</min-lb>
+		<max-lb type="double">95000</max-lb>
+	</weight>
+
+</payload>
+	
+	
+	<nasal>
+		<A300-600> 
+		  <file>Nasal/liveries600F.nas</file>
+             <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+		</A300-600>
+	</nasal> 
+	
+
+
+
+
+</PropertyList>

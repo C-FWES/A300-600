@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+
+ <!-- 
+ Copyright Toryx 2014
+ Distributed under the terms of the GNU General Public Livense v2
+ -->
+
+<PropertyList>
+ 
+
+ <path>Aircraft/A300-600/Models/GE-CF6.ac</path>
+
+<!-- ................................................... -->
+<!-- Engines -->
+<!-- ................................................... -->
+
+
+  <animation>
+  <type>material</type>
+   <object-name>engine_GE_r</object-name>
+   <object-name>engine_GE_l</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture</texture-prop>
+   <texture>Liveries/IB90.png</texture>
+ </animation>
+
+  <animation>
+  <type>shader</type>
+  <shader>chrome</shader>
+  <texture>chrome2.png</texture>
+  <object-name>engine_GE_r</object-name>
+  <object-name>engine_GE_l</object-name>
+ </animation>
+ 
+<animation>
+  <type>spin</type>
+  <object-name>engine_GE_fan_r</object-name>
+  <object-name>engine_GE_fan_r_blur</object-name>
+   <property>/engines/engine[0]/n1</property>
+  <factor>-2</factor>
+  <center>
+   <x-m>-2.8144</x-m>
+   <y-m>8.08865</y-m>
+   <z-m>-2.48742</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>spin</type>
+  <object-name>engine_GE_fan_l</object-name>
+  <object-name>engine_GE_fan_l_blur</object-name>
+   <property>/engines/engine[1]/n1</property>
+  <factor>-2</factor>
+  <center>
+   <x-m>-2.8144</x-m>
+   <y-m>-8.08865</y-m>
+   <z-m>-2.48742</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+ <type>select</type>
+ <object-name>engine_GE_fan_r</object-name>  
+ <object-name>engine_GE_fan_l</object-name>  
+ <condition>
+  <less-than>
+   <property>/engines/engine[0]/n1</property>
+   <value>50</value>
+  </less-than>
+ </condition>
+</animation>
+
+<animation>
+ <type>select</type>
+ <object-name>engine_GE_fan_r_blur</object-name>
+ <object-name>engine_GE_fan_l_blur</object-name>
+ <condition>
+  <greater-than>
+   <property>/engines/engine[0]/n1</property>
+   <value>50</value>
+  </greater-than>
+ </condition>
+</animation>
+
+
+</PropertyList>

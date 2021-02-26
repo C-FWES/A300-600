@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel1</object-name>
+    
+ 
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Gear Lever -->
+  <animation>
+	  <type>rotate</type>
+	  <object-name>GearLever</object-name>
+	  <property>controls/gear/gear-down</property>
+	  <factor>-50</factor>
+	  <offset-deg>50</offset-deg>   
+	  <axis>  
+	   <x1-m>-0.0421</x1-m>
+	   <y1-m>0.1625</y1-m>
+	   <z1-m>-0.0865</z1-m>
+	   <x2-m>-0.0421</x2-m>
+	   <y2-m>-0.1625</y2-m>
+	   <z2-m>-0.0865</z2-m>
+	  </axis>
+	</animation>
+
+   <animation>
+        <type>pick</type>
+        <object-name>GearLever</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.05</interval-sec>
+            <binding>
+                <command>property-cycle</command>
+		     <property>controls/gear/gear-down</property>
+			<value>0</value>
+			<value>1</value>
+            </binding>
+	  </action>
+
+    </animation>
+
+ 
+  <!-- Flaps lever -->
+  <animation>
+	  <type>rotate</type>
+	  <object-name>panelC.027</object-name>
+	  <property>controls/flight/flaps</property>
+	  <factor>60</factor>
+	  <offset-deg>-37</offset-deg>   
+	  <axis>  
+	   <x1-m>0.004</x1-m>
+	   <y1-m>-0.1265</y1-m>
+	   <z1-m>0.1000</z1-m>
+	   <x2-m>0.004</x2-m>
+	   <y2-m>-0.1145</y2-m>
+	   <z2-m>0.1000</z2-m>
+	  </axis>
+	</animation>
+
+  <!-- Park break lever -->
+  <animation>
+	  <type>rotate</type>
+	  <object-name>PbrakeLever</object-name>
+	  <property>controls/gear/brake-parking</property>
+	  <factor>45</factor>
+	  <offset-deg>0</offset-deg>   
+	  <axis>  
+	   <x1-m>0.1372</x1-m>
+	   <y1-m>-0.1445</y1-m>
+	   <z1-m>0.1498</z1-m>
+	   <x2-m>0.1704</x2-m>
+	   <y2-m>-0.1445</y2-m>
+	   <z2-m>0.2453</z2-m>
+	  </axis>
+	</animation>
+	<animation>
+	  <type>translate</type>
+	  <object-name>PbrakeLever</object-name>
+	  <property>controls/gear/brake-parking</property>
+	  <factor>0.03</factor>
+	  <offset-m>-0.03</offset-m>
+	  <axis>  
+	   <x1-m>0.1372</x1-m>
+	   <y1-m>-0.1445</y1-m>
+	   <z1-m>0.1498</z1-m>
+	   <x2-m>0.1704</x2-m>
+	   <y2-m>-0.1445</y2-m>
+	   <z2-m>0.2453</z2-m>
+	  </axis>
+	</animation>
+
+  <!-- Speed brakes lever -->
+  <animation>
+	  <type>rotate</type>
+	  <object-name>SbrakeLever</object-name>
+	  <property>controls/flight/spoilers</property>
+	  <factor>60</factor>
+	  <offset-deg>-45</offset-deg>   
+	  <axis>  
+	   <x1-m>0.004</x1-m>
+	   <y1-m>-0.1265</y1-m>
+	   <z1-m>0.1799</z1-m>
+	   <x2-m>0.004</x2-m>
+	   <y2-m>-0.1145</y2-m>
+	   <z2-m>0.1799</z2-m>
+	  </axis>
+	</animation>
+
+  <!-- Ap master switch-->
+  <animation>
+	<type>rotate</type>
+	  <object-name>Cylinder.014</object-name>
+	  <property>autopilot/internal/engaged</property>
+         <interpolation>
+            <entry><ind>0</ind><dep>-29</dep></entry>
+		 <entry><ind>1</ind><dep>29</dep></entry>
+         </interpolation>
+	  <axis>  
+	   <x1-m>0.0699</x1-m>
+	   <y1-m>-0.1209</y1-m>
+	   <z1-m>0.2023</z1-m>
+	   <x2-m>0.0699</x2-m>
+	   <y2-m>-0.1374</y2-m>
+	   <z2-m>0.2023</z2-m>
+	  </axis>
+	</animation>
+
+<!--Altitude select knob-->
+  <animation>
+	<type>rotate</type>
+	  <object-name>Cylinder.016</object-name>
+	  <property>autopilot/settings/target-altitude-ft</property>
+	  <factor>-12</factor>
+	  <axis>  
+	   <x1-m>0.0977</x1-m>
+	   <y1-m>-0.0621</y1-m>
+	   <z1-m>0.1860</z1-m>
+	   <x2-m>0.0708</x2-m>
+	   <y2-m>-0.0621</y2-m>
+	   <z2-m>0.1817</z2-m>
+	  </axis>
+	</animation>
+<!--Speed knob-->
+  <animation>
+	<type>rotate</type>
+	  <object-name>Cylinder.019</object-name>
+	  <property>autopilot/settings/target-speed-kt</property>
+	  <factor>-12</factor>
+	  <axis>  
+	   <x1-m>0.0974</x1-m>
+	   <y1-m>-0.1438</y1-m>
+	   <z1-m>0.1871</z1-m>
+	   <x2-m>0.0708</x2-m>
+	   <y2-m>-0.1438</y2-m>
+	   <z2-m>0.1827</z2-m>
+	  </axis>
+	</animation>
+
+<!--Vertical Speed-->
+  <animation>
+	<type>rotate</type>
+	  <object-name>Cylinder.013</object-name>
+	  <property>autopilot/settings/vertical-speed-fpm</property>
+	  <factor>-12</factor>
+	  <axis>  
+	   <x1-m>0.0979</x1-m>
+	   <y1-m>0.0774</y1-m>
+	   <z1-m>0.1865</z1-m>
+	   <x2-m>0.0711</x2-m>
+	   <y2-m>0.0774</y2-m>
+	   <z2-m>0.1820</z2-m>
+	  </axis>
+	</animation>
+<!--heading knob-->
+  <animation>
+	<type>rotate</type>
+	  <object-name>Cylinder.018</object-name>
+	  <property>autopilot/settings/heading-bug-deg</property>
+	  <factor>-12</factor>
+	  <axis>  
+	   <x1-m>0.0974</x1-m>
+	   <y1-m>0.0184</y1-m>
+	   <z1-m>0.1864</z1-m>
+	   <x2-m>0.0706</x2-m>
+	   <y2-m>0.0184</y2-m>
+	   <z2-m>0.1819</z2-m>
+	  </axis>
+	</animation>
+
+<!--buttons-->
+
+  <animation>
+    <type>material</type>
+    <object-name>ATHR.001</object-name>
+    <object-name>ATHR</object-name>
+    <object-name>Ap-alt-hld</object-name>
+    <object-name>Ap-alt-hld.001</object-name>
+    <object-name>Hdg-Bttn</object-name>
+    <object-name>Hdg-Bttn.001</object-name>
+    <object-name>Nav-hold</object-name>
+    <object-name>Nav-hold.001</object-name>
+    <object-name>V/L</object-name>
+    <object-name>V/L.001</object-name>
+    <object-name>Apr-hold</object-name>
+    <object-name>Apr-hold.001</object-name>
+    <object-name>Bezel.000</object-name>
+    <object-name>LVCH.001</object-name>
+    <object-name>LVCH</object-name>
+     <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>ATHR</object-name>
+	<condition>
+		<equals>
+             <property>/autopilot/locks/speed</property>
+		  <value type="string"></value>
+		</equals>
+	</condition>
+</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>ATHR.001</object-name>
+	<condition>
+		<equals>
+             <property>/autopilot/locks/speed</property>
+		   <value type="string">speed-with-throttle</value>
+		</equals>
+	</condition>
+</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Ap-alt-hld.001</object-name>
+	<condition>
+		<equals>
+             <property>/autopilot/locks/altitude</property>
+		   <value type="string">altitude-hold</value>
+		</equals>
+	</condition>
+</animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>Hdg-Bttn.001</object-name>
+	<condition>
+		<equals>
+             <property>/autopilot/locks/heading</property>
+		   <value type="string">dg-heading-hold</value>
+		</equals>
+	</condition>
+</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Nav-hold.001</object-name>
+	<condition>
+		<equals>
+             <property>/autopilot/locks/heading</property>
+		   <value type="string">nav1-hold</value>
+		</equals>
+	</condition>
+</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>V/L.001</object-name>
+	<condition>
+		<equals>
+             <property>/autopilot/locks/heading</property>
+		   <value type="string">nav1-hold</value>
+		</equals>
+	</condition>
+</animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LVCH.001</object-name>
+	<condition>
+		<or>
+            <greater-than>
+             <property>/autopilot/internal/target-climb-rate-fps</property>
+		   <value>2.0</value>
+           </greater-than>
+            <less-than>
+             <property>/autopilot/internal/target-climb-rate-fps</property>
+		   <value>-2.0</value>
+           </less-than>
+           <equals>
+             <property>/autopilot/locks/altitude</property>
+		   <value>vertical-speed-hold</value>
+		</equals>
+	    </or>
+	</condition>
+</animation>
+
+
+
+  <animation>
+    <type>select</type>
+    <object-name>Apr-hold.001</object-name>
+	<condition>
+		<equals>
+             <property>/autopilot/locks/altitude</property>
+		   <value type="string">gs1-hold</value>
+		</equals>
+	</condition>
+</animation>
+
+
+
+
+
+
+  <!-- Overhead -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Overhead/overhead.xml</path>
+    <offsets>
+      <x-m>  0.724 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.629 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Pedestal -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Pedestal/pedestal.xml</path>
+    <offsets>
+      <x-m>  0.415 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.488 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Eadi -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/eadi/eadi.xml</path>
+    <offsets>
+      <x-m> -0.029 </x-m>
+      <y-m> -0.571 </y-m>
+      <z-m> -0.026 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/eadi/eadi.xml</path>
+    <offsets>
+      <x-m> -0.029 </x-m>
+      <y-m>  0.571 </y-m>
+      <z-m> -0.026 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- nd -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/nd-old/nd.xml</path>
+    <offsets>
+      <x-m> -0.015 </x-m>
+      <y-m> -0.571 </y-m>
+      <z-m> -0.191 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/nd-old/nd.xml</path>
+    <offsets>
+      <x-m> -0.015</x-m>
+      <y-m>  0.571 </y-m>
+      <z-m> -0.191 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- aiSTB -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/aiSTB/aiSTB.xml</path>
+    <offsets>
+      <x-m> -0.026</x-m>
+      <y-m> -0.705 </y-m>
+      <z-m> -0.026 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/aiSTB/aiSTB.xml</path>
+    <offsets>
+      <x-m> -0.026</x-m>
+      <y-m>  0.437 </y-m>
+      <z-m> -0.026 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- hsi -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> -0.014 </x-m>
+      <y-m> -0.705 </y-m>
+      <z-m> -0.129 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> -0.014 </x-m>
+      <y-m>  0.437 </y-m>
+      <z-m> -0.129 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Altimeter -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Altimeter/altimeter.xml</path>
+    <offsets>
+      <x-m> -0.024 </x-m>
+      <y-m> -0.437 </y-m>
+      <z-m> -0.022 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Altimeter/altimeter.xml</path>
+    <offsets>
+      <x-m> -0.024 </x-m>
+      <y-m>  0.705 </y-m>
+      <z-m> -0.022 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- vsi -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -0.017 </x-m>
+      <y-m> -0.437 </y-m>
+      <z-m> -0.110 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -0.017 </x-m>
+      <y-m>  0.705 </y-m>
+      <z-m> -0.110 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- ADF -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ADF/adf.xml</path>
+    <offsets>
+      <x-m> -0.005 </x-m>
+      <y-m> -0.437 </y-m>
+      <z-m> -0.198 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ADF/adf.xml</path>
+    <offsets>
+      <x-m> -0.005 </x-m>
+      <y-m>  0.705 </y-m>
+      <z-m> -0.198 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Chronometer -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Chronometer/chronometer.xml</path>
+    <offsets>
+      <x-m> -0.013 </x-m>
+      <y-m> -0.365 </y-m>
+      <z-m> -0.114 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Chronometer/chronometer.xml</path>
+    <offsets>
+      <x-m> -0.013 </x-m>
+      <y-m>  0.777 </y-m>
+      <z-m> -0.114 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- egt -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/egt/egt-L.xml</path>
+    <offsets>
+      <x-m> -0.024 </x-m>
+      <y-m> -0.032 </y-m>
+      <z-m> -0.000 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/egt/egt-R.xml</path>
+    <offsets>
+      <x-m> -0.024 </x-m>
+      <y-m>  0.032 </y-m>
+      <z-m> -0.000 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- n1 -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/n1/n1-L.xml</path>
+    <offsets>
+      <x-m> -0.018 </x-m>
+      <y-m> -0.032 </y-m>
+      <z-m> -0.058 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/n1/n1-R.xml</path>
+    <offsets>
+      <x-m> -0.018 </x-m>
+      <y-m>  0.032 </y-m>
+      <z-m> -0.058 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- epr -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/epr/epr-L.xml</path>
+    <offsets>
+      <x-m> -0.011 </x-m>
+      <y-m> -0.032 </y-m>
+      <z-m> -0.116 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/epr/epr-R.xml</path>
+    <offsets>
+      <x-m> -0.011 </x-m>
+      <y-m>  0.032 </y-m>
+      <z-m> -0.116 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- FF -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/FF/FF-L.xml</path>
+    <offsets>
+      <x-m> -0.005 </x-m>
+      <y-m> -0.032 </y-m>
+      <z-m> -0.175 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/FF/FF-R.xml</path>
+    <offsets>
+      <x-m> -0.005 </x-m>
+      <y-m>  0.032 </y-m>
+      <z-m> -0.175 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Oil press -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/OilPress/L-OilPress.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.032 </y-m>
+      <z-m> -0.234 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/OilPress/R-OilPress.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.032 </y-m>
+      <z-m> -0.234 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- DIGITAL -->
+  <!-- Mach -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Digital/Mach/DigitalMach.xml</path>
+    <offsets>
+      <x-m>  0.072 </x-m>
+      <y-m> -0.145 </y-m>
+      <z-m>  0.215 </z-m>
+      <pitch-deg> -9 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Alt -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Digital/Alt/DigitalAlt.xml</path>
+    <offsets>
+      <x-m>  0.072 </x-m>
+      <y-m> -0.062 </y-m>
+      <z-m>  0.215 </z-m>
+      <pitch-deg> -9 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- Heading -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Digital/Heading/DigitalHeading.xml</path>
+    <offsets>
+      <x-m>  0.072 </x-m>
+      <y-m>  0.008 </y-m>
+      <z-m>  0.215 </z-m>
+      <pitch-deg> -9 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- DGempty1 -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Digital/DGempty1/DGempty1.xml</path>
+    <offsets>
+      <x-m>  0.072 </x-m>
+      <y-m> -0.248 </y-m>
+      <z-m>  0.215 </z-m>
+      <pitch-deg> -9 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Digital/DGempty1/DGempty1.xml</path>
+    <offsets>
+      <x-m>  0.072 </x-m>
+      <y-m>  0.248 </y-m>
+      <z-m>  0.215 </z-m>
+      <pitch-deg> -9 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <!-- DGempty2 -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/Digital/DGempty2/DGempty2.xml</path>
+    <offsets>
+      <x-m>  0.072 </x-m>
+      <y-m>  0.076 </y-m>
+      <z-m>  0.215 </z-m>
+      <pitch-deg> -9 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- empty for the moment--> 
+  <!-- empty1 -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/empty/empty1/empty1.xml</path>
+    <offsets>
+      <x-m> -0.019 </x-m>
+      <y-m> -0.143 </y-m>
+      <z-m> -0.061 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/empty/empty2/empty2.xml</path>
+    <offsets>
+      <x-m> -0.015 </x-m>
+      <y-m> -0.222 </y-m>
+      <z-m> -0.079 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/empty/empty3/empty3.xml</path>
+    <offsets>
+      <x-m> -0.011 </x-m>
+      <y-m> -0.173 </y-m>
+      <z-m> -0.218 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/empty/empty3/empty3.xml</path>
+    <offsets>
+      <x-m> -0.011 </x-m>
+      <y-m>  0.173 </y-m>
+      <z-m> -0.218 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+
+<!--Hotspots-->
+
+	    <animation>
+        <type>pick</type>
+        <object-name>Cylinder.016</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/target-altitude-ft</property>
+                <step>100</step>
+			<max>45000</max>
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/target-altitude-ft</property>
+                <step>-100</step>
+			<min>0</min>
+            </binding>
+        </action>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/target-altitude-ft</property>
+                <step>1000</step>
+			<max>45000</max>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/target-altitude-ft</property>
+                <step>-1000</step>
+			<min>0</min>
+            </binding>
+        </action>
+
+
+    </animation>
+
+<!--mode buttons-->
+
+   <animation>
+        <type>pick</type>
+        <object-name>Ap-alt-hld</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.05</interval-sec>
+            <binding>
+                <command>property-assign</command>
+		     <property>autopilot/locks/altitude</property>
+			<value type="string">altitude-hold</value>
+            </binding>
+	  </action>
+
+    </animation>
+
+   <animation>
+        <type>pick</type>
+        <object-name>Hdg-Bttn</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.05</interval-sec>
+            <binding>
+                <command>nasal</command>
+		     <script>var heading = getprop("/orientation/heading-magnetic-deg");
+setprop("/autopilot/locks/heading", "dg-heading-hold");
+setprop("/autopilot/settings/heading-bug-deg", heading);</script>
+            </binding>
+	  </action>
+    </animation>
+  
+  <animation>
+        <type>pick</type>
+        <object-name>ATHR</object-name>
+	  <object-name>ATHR.001</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.05</interval-sec>
+            <binding>
+                <command>property-cycle</command>
+		     <property>autopilot/locks/speed</property>
+			<value type="string">speed-with-throttle</value>
+			<value type="string"></value>
+            </binding>
+	  </action>
+    </animation>
+
+   <animation>
+        <type>pick</type>
+        <object-name>Nav-hold</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-cycle</command>
+		     <property>autopilot/locks/heading</property>
+			<value type="string">nav1-hold</value>
+			<value type="string"></value>
+            </binding>
+	  </action>
+   </animation>
+
+   <animation>
+        <type>pick</type>
+        <object-name>V/L</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-cycle</command>
+		     <property>autopilot/locks/heading</property>
+			<value type="string">nav1-hold</value>
+			<value type="string"></value>
+            </binding>
+	  </action>
+   </animation>
+
+   <animation>
+        <type>pick</type>
+        <object-name>Apr-hold</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-cycle</command>
+		     <property>autopilot/locks/altitude</property>
+			<value type="string">gs1-hold</value>
+			<value type="string"></value>
+            </binding>
+	  </action>
+   </animation>
+
+   <animation>
+        <type>pick</type>
+        <object-name>LVCH</object-name>    
+        <object-name>LVCH.001</object-name>
+         <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>property-cycle</command>
+		     <property>autopilot/locks/altitude</property>
+			<value type="string">vertical-speed-hold</value>
+			<value type="string"></value>
+            </binding>
+	  </action>
+   </animation>
+
+
+
+
+
+<!--AP master-->
+   <animation>
+        <type>pick</type>
+        <object-name>Cylinder.014</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.05</interval-sec>	                      		  
+              <binding>
+                <command>property-assign</command>
+		     <property>autopilot/locks/altitude</property>
+			<value type="string"></value>
+			<condition>
+				<equals>
+				<property>autopilot/internal/engaged</property>
+				<value>1</value>
+				</equals>
+			</condition>
+	         </binding>
+              <binding>
+                <command>property-assign</command>
+		     <property>autopilot/locks/heading</property>
+			<value type="string"></value>
+			<condition>
+				<equals>
+				<property>autopilot/internal/engaged</property>
+				<value>1</value>
+				</equals>
+			</condition>
+	         </binding>
+            <binding>
+                <command>property-assign</command>
+		     <property>autopilot/locks/altitude</property>
+			<value type="string">vertical-speed-hold</value>
+			<condition>
+				<equals>
+				<property>autopilot/internal/engaged</property>
+				<value>0</value>
+				</equals>
+			</condition>
+	         </binding>
+              <binding>
+                <command>property-assign</command>
+		     <property>autopilot/locks/heading</property>
+			<value type="string">wing-leveler</value>
+			<condition>
+				<equals>
+				<property>autopilot/internal/engaged</property>
+				<value>0</value>
+				</equals>
+			</condition>
+	         </binding>
+                  <binding>
+		     <property>autopilot/internal/engaged</property>
+                        <command>property-cycle</command>
+			<value type="double">1</value>
+			<value type="double">0</value>
+	         </binding>
+		</action>
+
+    </animation>
+
+
+    
+
+<!--Autothrottle Speed select-->
+	    <animation>
+        <type>pick</type>
+        <object-name>Cylinder.019</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/target-speed-kt</property>
+                <step>1</step>
+                <max>330</max>
+
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/target-speed-kt</property>
+                <step>-1</step>	               
+                <min>0</min>
+            </binding>
+        </action>
+
+    </animation>
+
+<!--Heading-Select-->
+	    <animation>
+        <type>pick</type>
+        <object-name>Cylinder.018</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/heading-bug-deg</property>
+                <step>1</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+            </binding>
+        </action>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/heading-bug-deg</property>
+                <step>10</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+            </binding>
+        </action>
+        <action>
+            <button>1</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/heading-bug-deg</property>
+                <step>-10</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/heading-bug-deg</property>
+                <step>-1</step>
+			<min>0</min>
+			<max>360</max>
+			<wrap>true</wrap>
+            </binding>
+        </action>
+   </animation>
+
+<!--Vertical Speed select-->
+	    <animation>
+        <type>pick</type>
+        <object-name>Cylinder.013</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/vertical-speed-fpm</property>
+                <step>100</step>
+			<max>4000</max>
+            </binding>
+        </action>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>autopilot/settings/vertical-speed-fpm</property>
+                <step>-100</step>
+			<min>-3000</min>
+            </binding>
+        </action>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-assign</command>
+                <property>autopilot/locks/altitude</property>
+				<value type="string">vertical-speed-hold</value>
+            </binding>
+        </action>
+
+
+    </animation>
+
+
+
+
+
+
+  
+</PropertyList>
+

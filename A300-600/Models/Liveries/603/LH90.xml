@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+ 
+ <PropertyList>
+  <sim>
+   <model>
+    <livery>
+     <name type="string">Lufthansa 90s</name>
+     <texture>Liveries/603/LH90.png</texture>
+    </livery>
+   </model>
+  </sim>
+ </PropertyList>

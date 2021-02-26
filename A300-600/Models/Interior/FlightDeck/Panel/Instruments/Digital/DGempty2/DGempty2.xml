@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>DGempty2.ac</path>
+	
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>BKG</object-name>
+    <object-name>1</object-name>
+    <object-name>1.001</object-name>
+    <object-name>2</object-name>
+    <object-name>3</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>BKG</object-name>
+    <object-name>1</object-name>
+   <object-name>1.001</object-name>
+    <object-name>2</object-name>
+    <object-name>3</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+<!--V/S-->
+  <animation>
+    <type>select</type>
+    <object-name>1.001</object-name>
+       <condition>
+		<less-than>
+             <property>/autopilot/settings/vertical-speed-fpm</property>
+         	  <value>0</value>
+		</less-than>
+       </condition>
+  </animation>
+
+<animation>
+ <type>select</type>
+ <object-name>1</object-name>  
+ <condition>
+  <greater-than-equals>
+   <property>/autopilot/settings/vertical-speed-fpm</property>
+   <value>0</value>
+  </greater-than-equals>
+ </condition>
+</animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>2</object-name>
+    <property>/autopilot/settings/vertical-speed-fpm</property>
+    <factor>0.0001</factor>
+    <step>1000</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+    <condition>
+	<less-than>
+	<property>/autopilot/settings/vertical-speed-fpm</property>
+		<value>0</value>	
+	</less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>2</object-name>
+    <property>/autopilot/settings/vertical-speed-fpm</property>
+    <factor>0.0001</factor>
+    <step>1000</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+    <condition>
+	<greater-than-equals>
+	<property>/autopilot/settings/vertical-speed-fpm</property>
+		<value>0</value>	
+	</greater-than-equals>
+    </condition>
+  </animation>
+
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>3</object-name>
+    <property>/autopilot/settings/vertical-speed-fpm</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+    <condition>
+	<less-than>
+	<property>/autopilot/settings/vertical-speed-fpm</property>
+		<value>0</value>	
+	</less-than>
+    </condition>
+ </animation>
+  <animation>
+    <type>textranslate</type>
+    <object-name>3</object-name>
+    <property>/autopilot/settings/vertical-speed-fpm</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+    <condition>
+	<greater-than-equals>
+	<property>/autopilot/settings/vertical-speed-fpm</property>
+		<value>0</value>	
+	</greater-than-equals>
+    </condition>
+ </animation>
+
+
+
+</PropertyList>

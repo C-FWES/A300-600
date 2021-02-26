@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>FF.ac</path>
+	
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>Face</object-name>
+    <object-name>Needle</object-name>
+    <object-name>trb</object-name>
+    <object-name>trb.1</object-name>
+    <object-name>trb.2</object-name>
+    <object-name>trb.3</object-name>
+    <object-name>trb.4</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/eng-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Face</object-name>
+    <object-name>needle</object-name>
+    <object-name>trb</object-name>
+    <object-name>trb.1</object-name>
+    <object-name>trb.2</object-name>
+    <object-name>trb.3</object-name>
+    <object-name>trb.4</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <!-- I used throttle property instead of "fuel-flow_pph" as I don't know why it doesn't work here -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 236 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>trb.1</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>trb.2</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>trb.3</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>trb.4</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor>1.0</factor>
+    <step>0.1</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

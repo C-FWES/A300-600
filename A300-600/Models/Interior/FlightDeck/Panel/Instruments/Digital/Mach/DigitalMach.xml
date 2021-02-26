@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>DigitalMach.ac</path>
+	
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>BKG</object-name>
+    <object-name>Mach.001</object-name>
+    <object-name>Mach.002</object-name>
+    <object-name>Mach.003</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>Mach.003</object-name>
+    <object-name>Mach.002</object-name>
+    <object-name>Mach.001</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <!-- Mach -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>Mach.001</object-name>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <factor>0.001</factor>
+    <step>100</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Mach.002</object-name>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>Mach.003</object-name>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+</PropertyList>
+

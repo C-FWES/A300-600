@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+
+ <!-- 
+ Copyright Toryx 2014
+ Distributed under the terms of the GNU General Public Livense v2
+ -->
+
+<PropertyList>
+	<path>Fuselage.ac</path> 
+
+
+ <animation>
+        <type>shader</type>
+        <shader>chrome</shader>
+        <texture>glassshade.png</texture>
+        <object-name>windscreen</object-name>
+ </animation>
+
+ <animation>
+  <type>material</type>
+   <object-name>Fuselage</object-name>
+   <object-name>Fuselage2</object-name>
+   <object-name>Fuselage3</object-name>
+   <object-name>Vents</object-name>
+   <object-name>Sensors</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture</texture-prop>
+   <texture>Liveries/600F/UPS.png</texture>
+ </animation>
+
+</PropertyList>

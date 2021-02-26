@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>littleseat.ac</path>
+  
+  <animation>
+    <object-name>littleseat</object-name>
+    <!-- Objets opaques -->
+
+    <!-- Objets transparents -->
+  </animation>
+
+</PropertyList>
+

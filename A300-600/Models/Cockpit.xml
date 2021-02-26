@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+
+ <!-- 
+ Copyright Toryx 2014
+ Distributed under the terms of the GNU General Public Livense v2
+ -->
+
+<PropertyList>
+ 
+<model>
+ <name>Cockpit</name>
+ <path>Aircraft/A300-600/Models/Flightdeck.ac</path>
+ <texture-path>./Liveries</texture-path>
+</model>
+
+</PropertyList>

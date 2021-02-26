@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>DigitalHeading.ac</path>
+	
+  <animation>
+    <object-name>Bezel</object-name>
+    <object-name>BKG</object-name>
+    <object-name>Neu</object-name>
+    <object-name>hdgtext</object-name>
+    <object-name>hdgtext.001</object-name>
+    <object-name>hdgtext.002</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>BKG</object-name>
+    <object-name>hdgtext</object-name>
+    <object-name>hdgtext.001</object-name>
+    <object-name>hdgtext.002</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   1.0 </red>
+      <green> 0.4 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+  <!-- Heading -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>hdgtext</object-name>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <factor>0.0025</factor>
+    <step>100</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>hdgtext.001</object-name>
+     <property>/autopilot/settings/heading-bug-deg</property>
+    <factor>0.01</factor>
+    <step>10</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>textranslate</type>
+    <object-name>hdgtext.002</object-name>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <factor>0.1</factor>
+    <step>1</step>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

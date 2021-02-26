@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <animation>
+	  <type>range</type>
+	  <min-m>0</min-m>
+	  <max-m>200</max-m>
+  </animation>
+
+  <path>flightdeck.ac</path>
+  
+  <animation>
+	<type>scale</type>
+		<x-offset>1.0</x-offset>
+		<y-offset>0.93</y-offset>
+		<z-offset>1.0</z-offset>
+	</animation>
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>LSfilter</object-name>
+    <object-name>LSfilterBarr</object-name>
+    <object-name>RSfilter</object-name>
+    <object-name>RSfilterBarr</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Pedals (Break) -->
+	<animation>
+	  <type>rotate</type>
+	  <object-name>PedalL</object-name>
+	  <object-name>PedalR</object-name>
+	  <property>controls/gear/brake-left</property> 
+	  <factor>-20</factor>
+	  <offset-deg>0</offset-deg>  	
+	  	<center>
+			<x-m>-0.844</x-m>
+			<y-m>0</y-m>
+			<z-m>0.01</z-m>
+		</center>
+		<axis>
+			<x> 0 </x>
+			<y> 1 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+ 
+ <!-- Pedals (Rudder) -->
+	<animation>
+	  <type>translate</type>
+	  <object-name>PedalL</object-name>
+	  <property>controls/flight/rudder</property>
+		<factor>0.10</factor>
+		<axis>
+			<x> 1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+
+	<animation>
+	  <type>translate</type>
+	  <object-name>PedalR</object-name>
+	  <property>controls/flight/rudder</property>
+		<factor>-0.10</factor>
+		<axis>
+			<x> 1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</axis>
+	</animation>
+  
+  <!-- Sun filters -->
+  <animation>
+    <name>PareSoleilGauche</name>
+    <object-name>LSfilter</object-name>
+    <object-name>LSfilterBarr</object-name>
+  </animation>
+
+  <animation>
+    <name>PareSoleilDroit</name>
+    <object-name>RSfilter</object-name>
+    <object-name>RSfilterBarr</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>PareSoleilGauche</object-name>
+    <property>instrumentation/doors/wings/position-norm</property>
+    <factor> 71.67 </factor>
+    <axis>
+      <x1-m> -0.624 </x1-m>
+      <y1-m> -0.491 </y1-m>
+      <z1-m>  1.259 </z1-m>
+      <x2-m> -0.798 </x2-m>
+      <y2-m> -0.088 </y2-m>
+      <z2-m>  1.259 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>PareSoleilDroit</object-name>
+    <property>instrumentation/doors/wings/position-norm</property>
+    <factor> -71.67 </factor>
+    <axis>
+      <x1-m> -0.624 </x1-m>
+      <y1-m>  0.491 </y1-m>
+      <z1-m>  1.259 </z1-m>
+      <x2-m> -0.798 </x2-m>
+      <y2-m>  0.088 </y2-m>
+      <z2-m>  1.259 </z2-m>
+    </axis>
+  </animation> 
+  
+  <!-- Panel -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -0.855 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.723 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Yokes -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Yokes/AllyokeL.xml</path>
+    <offsets>
+      <x-m> -0.579 </x-m>
+      <y-m> -0.614 </y-m>
+      <z-m> -0.027 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Yokes/AllyokeR.xml</path>
+    <offsets>
+      <x-m> -0.579 </x-m>
+      <y-m>  0.614 </y-m>
+      <z-m> -0.027 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Seats -->
+  <!-- Pilot -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Seats/bigseat.xml</path>
+    <offsets>
+      <x-m>  0.101 </x-m>
+      <y-m> -0.632 </y-m>
+      <z-m>  0.524 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Copilot -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Seats/bigseat.xml</path>
+    <offsets>
+      <x-m> 0.101 </x-m>
+      <y-m> 0.632 </y-m>
+      <z-m> 0.524 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Enginer -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Seats/littleseat.xml</path>
+    <offsets>
+      <x-m>  1.246 </x-m>
+      <y-m> -1.357 </y-m>
+      <z-m>  0.594 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Seats/littleseat.xml</path>
+    <offsets>
+      <x-m>  0.762 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.590 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
