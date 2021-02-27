@@ -124,13 +124,12 @@
 	
 	
 	<nasal>
-		<A300-600> 
+		<a300> 
 		  <file>Nasal/liveries600F.nas</file>
              <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
 			 <file>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
-			  <file>Aircraft/A300-600/Nasal/ND.nas</file>
 			  <file>Aircraft/A300-600/Nasal/electrical.nas</file>
-		</A300-600>
+		</a300>
 	</nasal> 
 	
 

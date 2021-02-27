@@ -35,7 +35,7 @@
 		<repeatable>false</repeatable>
 		<binding>
 			<command>nasal</command>
-			<script>A300-600.showNd();</script>
+			<script>a300.showNd();</script>
 		</binding>
 	</action>
 </animation>
