@@ -150,11 +150,13 @@
 		</engine>
 	</engines>	
 	
-		<nasal>
+	<nasal>
 		<A300-600> 
-		  <file>Nasal/liveries603.nas</file>
-             <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+		<file>Nasal/liveries603.nas</file>
+        <file>Aircraft/A300-600/Nasal/tyresmoke.nas</file>
+		<file>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ND/ND.nas</file>
 		</A300-600>
+	
 	</nasal> 
 
     <gear n="0">

@@ -371,7 +371,7 @@
   
   <!-- nd -->
   <model>
-    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/nd-old/nd.xml</path>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ND/ND_L.xml</path>
     <offsets>
       <x-m> -0.015 </x-m>
       <y-m> -0.571 </y-m>
@@ -379,9 +379,19 @@
       <pitch-deg> -6 </pitch-deg>
     </offsets>
   </model>
+
+  <!-- <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ND/ND_L.xml</path>
+    <offsets>
+      <x-m> -0.013 </x-m>
+      <y-m> -0.571 </y-m>
+      <z-m> -0.206 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model> -->
   
   <model>
-    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/nd-old/nd.xml</path>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ND/ND_R.xml</path>
     <offsets>
       <x-m> -0.015</x-m>
       <y-m>  0.571 </y-m>
@@ -389,7 +399,16 @@
       <pitch-deg> -6 </pitch-deg>
     </offsets>
   </model>
-  
+  <!-- <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/ND/ND_R.xml</path>
+    <offsets>
+      <x-m> -0.013</x-m>
+      <y-m>  0.571 </y-m>
+      <z-m> -0.206 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model>
+   -->
   <!-- aiSTB -->
   <model>
     <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/aiSTB/aiSTB.xml</path>
