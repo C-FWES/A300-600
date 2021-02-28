@@ -35,6 +35,7 @@ setprop ("controls/fuel/tank[2]/boost-pump", 1);
 setprop ("controls/fuel/tank[4]/boost-pump", 1);
 setprop ("controls/engines/engine/starter", 1);
 setprop ("controls/engines/engine[1]/starter", 1);
+setprop ("systems/electrical/outputs/efis", 25);
 settimer(start1, 3);
 settimer(start2, 16);</script>
 			 </binding>
