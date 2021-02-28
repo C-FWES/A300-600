@@ -115,7 +115,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
       <location unit="IN">
          <x> -628.82 </x>
          <y> 0 </y>
-         <z> -215.91 </z> 
+         <z> -210.91 </z> 
       </location>
       <static_friction> 0.8 </static_friction>
       <dynamic_friction> 0.5 </dynamic_friction>
@@ -133,7 +133,8 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
       <location unit="IN">
          <x> 192.92 </x>
          <y> -216.932 </y>
-         <z> -215.91</z>
+         <!-- <z> -215.91</z> -->
+		 <z> -210.91</z>
       </location>
       <static_friction> 0.8 </static_friction>
       <dynamic_friction> 0.5 </dynamic_friction>
@@ -148,7 +149,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
       <location unit="IN">
          <x> 192.92 </x>
          <y> 216.932 </y>
-         <z> -215.91 </z>
+         <z> -210.91 </z>
       </location>
       <static_friction> 0.8 </static_friction>
       <dynamic_friction> 0.5 </dynamic_friction>
@@ -164,7 +165,8 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
       <location unit="IN">
          <x> 266.74 </x>
          <y> -216.932 </y>
-         <z> -215.91 </z>
+         <!-- <z> -215.91 </z> -->
+		  <z> -210.91 </z>
       </location>
       <static_friction> 0.8 </static_friction>
       <dynamic_friction> 0.5 </dynamic_friction>
@@ -179,7 +181,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
       <location unit="IN">
          <x> 266.74 </x>
          <y> 216.932 </y>
-         <z> -215.91 </z>
+         <z> -210.91 </z>
       </location>
       <static_friction> 0.8 </static_friction>
       <dynamic_friction> 0.5 </dynamic_friction>

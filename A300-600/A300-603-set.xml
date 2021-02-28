@@ -19,7 +19,7 @@
 		 <cockpit type="int">3</cockpit>
 		 <model type="int">4</model>
 		</rating>
-		<author>Models: Toryx, Airbus330, Pierre Duval; Flightdeck: Pierre Duval</author>
+		<author>Models: Toryx, Airbus330, Pierre Duval; Flightdeck: Pierre Duval, C-FWES</author>
 		<flight-model>jsb</flight-model>
 		<aero>A300-603</aero>
 		<variant>603</variant>
