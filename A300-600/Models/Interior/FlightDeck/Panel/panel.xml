@@ -349,8 +349,17 @@
   </model>
   
   <!-- Eadi -->
-  <model>
+  <!-- <model>
     <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/eadi/eadi.xml</path>
+    <offsets>
+      <x-m> -0.029 </x-m>
+      <y-m> -0.571 </y-m>
+      <z-m> -0.026 </z-m>
+      <pitch-deg> -6 </pitch-deg>
+    </offsets>
+  </model> -->
+  <model>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/PFD/PFD1.xml</path>
     <offsets>
       <x-m> -0.029 </x-m>
       <y-m> -0.571 </y-m>
@@ -359,8 +368,9 @@
     </offsets>
   </model>
   
+  
   <model>
-    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/eadi/eadi.xml</path>
+    <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/PFD/PFD2.xml</path>
     <offsets>
       <x-m> -0.029 </x-m>
       <y-m>  0.571 </y-m>
