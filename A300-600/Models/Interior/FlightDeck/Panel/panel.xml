@@ -100,7 +100,7 @@
   <animation>
 	  <type>rotate</type>
 	  <object-name>SbrakeLever</object-name>
-	  <property>controls/flight/spoilers</property>
+	  <property>surface-positions/speedbrake-pos-norm</property>
 	  <factor>60</factor>
 	  <offset-deg>-45</offset-deg>   
 	  <axis>  
