@@ -362,7 +362,8 @@
     <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/PFD/PFD1.xml</path>
     <offsets>
       <x-m> -0.029 </x-m>
-      <y-m> -0.571 </y-m>
+      <!-- <y-m> -0.571 </y-m> -->
+      <y-m> -0.566 </y-m>
       <z-m> -0.026 </z-m>
       <pitch-deg> -6 </pitch-deg>
     </offsets>
@@ -373,7 +374,7 @@
     <path>Aircraft/A300-600/Models/Interior/FlightDeck/Panel/Instruments/PFD/PFD2.xml</path>
     <offsets>
       <x-m> -0.029 </x-m>
-      <y-m>  0.571 </y-m>
+      <y-m>  0.570 </y-m>
       <z-m> -0.026 </z-m>
       <pitch-deg> -6 </pitch-deg>
     </offsets>
