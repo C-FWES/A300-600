@@ -5,7 +5,7 @@
 	<systems>	
             <path>Aircraft/A300-600/Systems/A300-systems.xml</path>
 	
-		<autopilot>
+		<!-- <autopilot>
 				<name>Autopilot</name>
 				<path>Aircraft/A300-600/Systems/A300-autopilot.xml</path>
 			</autopilot>
@@ -16,6 +16,19 @@
 			<autopilot>
 				<name>Autobrake</name>
 				<path>Aircraft/A300-600/Systems/A300-autobrake.xml</path>
+			</autopilot> -->
+
+			<autopilot>
+    			<name>IT-AUTOFLIGHT</name>
+    			<path>Systems/it-autoflight.xml</path>
+			</autopilot>
+			<autopilot>
+    			<name>IT-AUTOTHRUST</name>
+    			<path>Systems/it-autothrust.xml</path>
+			</autopilot>
+			<autopilot>
+    			<name>Gear AGL FT</name>
+    			<path>Systems/gear-agl-ft.xml</path>
 			</autopilot>
 			
 
